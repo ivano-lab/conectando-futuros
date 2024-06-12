@@ -1,0 +1,120 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .menu-hamburguer {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+nav .menu-hamburguer span {
+  background: white;
+  border-radius: 2px;
+  display: block;
+  height: 4px;
+  margin: 5px 0;
+  transition: 0.4s;
+  width: 25px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 2rem;
+  text-align: center;
+}
+
+section#sobre {
+  background: #f4f4f4;
+}
+
+section#cursos {
+  background: #fff;
+}
+
+.curso {
+  background: #e2e2e2;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column;
+  }
+  
+  nav ul {
+      flex-direction: column;
+      display: none;
+  }
+
+  nav ul.active {
+      display: flex;
+  }
+  
+  nav ul li {
+      margin: 0.5rem 0;
+  }
+
+  nav .menu-hamburguer {
+      display: flex;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+  }
+}
